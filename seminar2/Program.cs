@@ -97,7 +97,7 @@ Console.Write ($"The biggest digit is {Digits()}");
 //напишите задачу, которая получает на вход число и проверяет, кратно ли оно одновременно двум другим
 
 
-/*
+
 void Cratnost (int num, int a, int b)
 {
     if (num % a == 0 && num % b == 0)
@@ -116,13 +116,13 @@ Console.WriteLine ("Enter you denominator2:");
 int den2 = Convert.ToInt32(Console.ReadLine());
 
 Cratnost (userName, den1, den2);
-*/
 
 
 
 //напишите программу, которая выводить случайное трехзначное число и удаляет вторую цифру этого числа
 // 486 -> 46, 789 -> 79
 
+/*
 int DeliteDec ()
 {
     int randomNum = new Random().Next (100,1000);
@@ -130,9 +130,10 @@ int DeliteDec ()
 
     int futDec = randomNum / 100;
     int futEd = randomNum % 10;
-    
+
     int futNum = futDec * 10 + futEd;
     return futNum;
 }
 
 Console.WriteLine ($"Your new number is {DeliteDec()}");
+*/
