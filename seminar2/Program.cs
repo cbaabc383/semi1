@@ -1,8 +1,4 @@
-﻿/*напишите программу, которая получает на вход двухзначное число, 
-и показывает наибольшую цифру числа
- */
-
-/*
+﻿
 int Digits (int num) //объявление метода Digit, который получает в качестве аргумента целое число и возвращает тоже целое
 {
     int ed = num % 10; //поиск едениц (остаток от деления на 10) 
@@ -23,10 +19,9 @@ int UserNum = Convert.ToInt32 (Console.ReadLine());
 int res = Digits (UserNum);
 
 Console.Write ($"The biggest digit is {res}");
-*/
 
 
-/*
+
 int Digits (int num) 
 {
     int ed = num % 10; 
@@ -44,14 +39,14 @@ int UserNum = Convert.ToInt32 (Console.ReadLine());
 int res = Digits (UserNum);
 
 Console.Write ($"The biggest digit is {res}");
-*/
+
 
 
 /*напишите программу, которая получает на вход СЛУЧАЙНОЕ двухзначное число, 
 и показывает наибольшую цифру числа
  */
 
-/*
+
  int Digits (int num) //объявление метода Digit, который получает в качестве аргумента целое число и возвращает тоже целое
 {
     int ed = num % 10; //поиск едениц (остаток от деления на 10) 
@@ -70,9 +65,9 @@ int randomNum = new Random().Next (10, 100);
 int res = Digits (randomNum);
 
 Console.Write ($"The biggest digit of {randomNum} is {res}");
-*/
 
-/*
+
+
 int Digits () 
 {
     int randomNum = new Random().Next (10, 100);
@@ -91,7 +86,7 @@ int Digits ()
 }
 
 Console.Write ($"The biggest digit is {Digits()}");
-*/
+
 
 
 //напишите задачу, которая получает на вход число и проверяет, кратно ли оно одновременно двум другим
@@ -122,7 +117,7 @@ Cratnost (userName, den1, den2);
 //напишите программу, которая выводить случайное трехзначное число и удаляет вторую цифру этого числа
 // 486 -> 46, 789 -> 79
 
-/*
+
 int DeliteDec ()
 {
     int randomNum = new Random().Next (100,1000);
@@ -136,4 +131,3 @@ int DeliteDec ()
 }
 
 Console.WriteLine ($"Your new number is {DeliteDec()}");
-*/

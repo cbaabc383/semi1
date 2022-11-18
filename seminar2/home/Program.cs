@@ -25,6 +25,7 @@ Console.Write ($"The second digit is {second(UserNum)}");
 32679 -> 6
 */
 
+/*
 int third (int num)
 {
     int three = (num / 100) % 10;
@@ -36,6 +37,25 @@ if (UserNum > 99)
     Console.Write ($"The third digit of your number is {third (UserNum)}");
 else
     Console.Write ("Your number doesn't have third digit");
+*/
 
 
+/*Задача 15: Напишите программу, которая принимает на вход цифру, обозначающую день недели, и проверяет, является ли этот день выходным.
+6 -> да
+7 -> да
+1 -> нет
+*/
 
+void holly (int date)
+{
+    if (date > 5)
+        Console.Write ("Yes");
+    else
+        Console.Write ("No");
+}
+Console.Write ("Input your number: ");
+int UserDate = Convert.ToInt32 (Console.ReadLine());
+if (UserDate > 0 && UserDate < 8)
+    holly (UserDate);
+else
+    Console.Write ("Input is not correct");
