@@ -1,33 +1,71 @@
-﻿//Напишите программу, которая принимает на вход число и выдаёт количество цифр в числе.
+﻿//напишите программу, которая принимает на входе число (А) и выдает сумму чисел от 1 до А.
+/*
+void MetFindSum (int a)
+{
+    int summa = 0;
+    for (int current = 1; current <= a ; current++)
+    {
+        summa += current; // summa = summa + current
+    }
+    Console.WriteLine ($"Summ of elements from 1 to {a} is {summa}");
+}
+
+Console.WriteLine ("Input your number");
+int userNum = Convert.ToInt32 (Console.ReadLine());
+
+MetFindSum (userNum);
+*/
+
+/*
+int MetFindSum2 (int a)
+{
+    int summa = 0;
+    for (int current = 1; current <= a ; current++)
+    {
+        summa += current; // summa = summa + current
+    }
+   return summa;
+}
+
+Console.WriteLine ("Input your number");
+int userNum = Convert.ToInt32 (Console.ReadLine());
+
+int result = MetFindSum2 (userNum);
+Console.WriteLine ($"Summ of elements from 1 to {userNum} is {result}");
+*/
+
+
+//Напишите программу, которая принимает на вход число и выдаёт количество цифр в числе.
 //456 -> 3
 //78 -> 2
 //89126 -> 5
 
-/*
 int CountOfDigits (int number)
-{
-    int index = 0;
+{   //int index = 0; //текущее значение степени
     int current = 1;
-    if (number >= Math.Pow(10, index));
+    //if (number >= Math.Pow(10, index));
     while (number >= 10)
     {
-        current++;
         number = number/10;
+        current++;
     }
+    //current -= 1;
     return current;
 }
+
 Console.WriteLine ("Input number:");
 int userNum = Convert.ToInt32(Console.ReadLine());
 
 int count_digit;
-int userNum1 = (-1) * userNum;
-if (userNum >0)
+int userNum1 = userNum * (-1);
+if (userNum >= 0)
     count_digit = CountOfDigits(userNum);
 else 
+    //userNum1 = userNum * (-1);
     count_digit = CountOfDigits (userNum1);
 
-Console.WriteLine ($"Enterer number {userNum} -> {count_digit}");
-*/
+Console.WriteLine ($"Entered number {userNum} -> {count_digit}");
+
 
 //Напишите программу, которая принимает на вход число N и выдаёт произведение чисел от 1 до N.
 //4 -> 24 
