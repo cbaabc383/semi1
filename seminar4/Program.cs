@@ -41,15 +41,13 @@ Console.WriteLine ($"Summ of elements from 1 to {userNum} is {result}");
 //89126 -> 5
 
 int CountOfDigits (int number)
-{   //int index = 0; //текущее значение степени
+{   
     int current = 1;
-    //if (number >= Math.Pow(10, index));
     while (number >= 10)
     {
         number = number/10;
         current++;
     }
-    //current -= 1;
     return current;
 }
 
