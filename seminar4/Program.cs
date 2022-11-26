@@ -14,9 +14,9 @@ Console.WriteLine ("Input your number");
 int userNum = Convert.ToInt32 (Console.ReadLine());
 
 MetFindSum (userNum);
-*/
 
-/*
+
+
 int MetFindSum2 (int a)
 {
     int summa = 0;
@@ -28,11 +28,10 @@ int MetFindSum2 (int a)
 }
 
 Console.WriteLine ("Input your number");
-int userNum = Convert.ToInt32 (Console.ReadLine());
+int UserNum = Convert.ToInt32 (Console.ReadLine());
 
-int result = MetFindSum2 (userNum);
+int result = MetFindSum2 (UserNum);
 Console.WriteLine ($"Summ of elements from 1 to {userNum} is {result}");
-*/
 
 
 //Напишите программу, которая принимает на вход число и выдаёт количество цифр в числе.
@@ -52,37 +51,39 @@ int CountOfDigits (int number)
 }
 
 Console.WriteLine ("Input number:");
-int userNum = Convert.ToInt32(Console.ReadLine());
+int usernum = Convert.ToInt32(Console.ReadLine());
 
 int count_digit;
 int userNum1 = userNum * (-1);
-if (userNum >= 0)
+if (usernum >= 0)
     count_digit = CountOfDigits(userNum);
 else 
     //userNum1 = userNum * (-1);
     count_digit = CountOfDigits (userNum1);
 
-Console.WriteLine ($"Entered number {userNum} -> {count_digit}");
-
+Console.WriteLine ($"Entered number {usernum} -> {count_digit}");
+*/
 
 //Напишите программу, которая принимает на вход число N и выдаёт произведение чисел от 1 до N.
 //4 -> 24 
 //5 -> 120
 
-/*
 void factorial (int n)
 {
     int multi = 1; //4 -> 24 multi > n ->
     for (int cur = 1; cur <= n; cur++)
     {
-        multi *= cur;
+        multi *=cur;
     }
+    Console.WriteLine ($"{n} -> {multi}");
+}
+
 Console.WriteLine("Input number:");
 int number = Convert.ToInt32(Console.ReadLine());
 
-if (number < 0)
+if (number <= 0)
 {
-    while (number < 0)
+    while (number <= 0)
     {
         Console.WriteLine("Pls, input POSITIVE int number");
         number = Convert.ToInt32(Console.ReadLine());
@@ -90,17 +91,18 @@ if (number < 0)
 }
 
 factorial (number);
-*/
-//yfgишите программу, которая выводит массив из 8 элементов,
+
+
+//напишите программу, которая выводит массив из 8 элементов,
 // заполненный нулями и единицами в случайном порядке.
 //[1,0,1,1,0,1,0,0]
 
 /*
-int [] CreatNewArray (int size)
+int [] CreatNewArray (int size, int min, int max)
 {
-    int [] array = new int [size]; // int(1) тип данных массива [] array  - имя массива newint[размер массива]
+    int [] array = new int [size]; // int(1) тип данных массива [] array  - имя массива new int[размер массива]
     for (int i = 0; i < size; i++)
-        array[i] = new Random().Next(0, 2);
+        array[i] = new Random().Next(min, max + 1);
     return array;
 }
 
@@ -111,10 +113,19 @@ void ShowArray (int [] array)
         Console.Write (array[i] + " ");
     }
 }
+
 Console.Write ("Itput count of elements:");
 int countOfElements = Convert.ToInt32(Console.ReadLine());
-int [] array1 = CreatNewArray (countOfElements);
-ShowArray (array1);
 
-ShowArray (CreatNewArray(countOfElements));
+Console.Write ("Itput min value of elements:");
+int minValue = Convert.ToInt32(Console.ReadLine());
+
+Console.Write ("Itput max value of elements:");
+int maxValue = Convert.ToInt32(Console.ReadLine());
+
+
+//int [] array1 = CreatNewArray (countOfElements, minValue, maxValue);
+//ShowArray (array1);
+
+ShowArray (CreatNewArray(countOfElements, minValue, maxValue));
 */
