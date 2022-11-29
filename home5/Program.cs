@@ -107,57 +107,57 @@ SumOdd (array);
 // [3 7 22 2 78] -> 76
 
 
-double [] CreateRandomArray (int size, int minValue, int maxValue)
+double[] CreateRandomArray(int size, int minValue, int maxValue)
 {
-    double [] newArray = new double [size];
+    double[] newArray = new double[size];
 
     for (int i = 0; i < size; i++)
     {
         int abc = new Random().Next(minValue, maxValue);
-        newArray[i] = Math.Round (new Random().NextDouble() + abc, 3);
+        newArray[i] = Math.Round(new Random().NextDouble() + abc, 3);
     }
     return newArray;
 }
 
-void ShowArray (double[] Array)
+void ShowArray(double[] Array)
 {
     for (int i = 0; i < Array.Length; i++)
-        Console.Write (Array[i] + " ");
-    
-Console.WriteLine ();
+        Console.Write(Array[i] + " ");
+
+    Console.WriteLine();
 }
 
-double MaxArray (double[] Array)
+double MaxArray(double[] Array)
 {
     double max = Array[0];
-    for (int i = 0; i < Array.Length; i ++)
+    for (int i = 0; i < Array.Length; i++)
         if (Array[i] > max)
             max = Array[i];
     return max;
 }
 
-double MinArray (double[] Array)
+double MinArray(double[] Array)
 {
     double min = Array[0];
-    for (int i = 0; i < Array.Length; i ++)
+    for (int i = 0; i < Array.Length; i++)
         if (Array[i] < min)
             min = Array[i];
     return min;
 }
 
-Console.WriteLine ("Input size of array");
+Console.WriteLine("Input size of array");
 int array_size = Convert.ToInt32(Console.ReadLine());
 
-Console.WriteLine ("Input min possible val of array");
+Console.WriteLine("Input min possible val of array");
 int minValue = Convert.ToInt32(Console.ReadLine());
 
-Console.WriteLine ("Input max possible val of array");
+Console.WriteLine("Input max possible val of array");
 int maxValue = Convert.ToInt32(Console.ReadLine());
 
-double []array =CreateRandomArray (array_size, minValue, maxValue);
-ShowArray (array);
+double[] array = CreateRandomArray(array_size, minValue, maxValue);
+ShowArray(array);
 
-Console.WriteLine ($"Max = {Math.Round (MaxArray(array), 3)}");
-Console.WriteLine ($"Min = {Math.Round (MinArray (array), 3)}");
+Console.WriteLine($"Max = {Math.Round(MaxArray(array), 3)}");
+Console.WriteLine($"Min = {Math.Round(MinArray(array), 3)}");
 
-Console.WriteLine ($"Max - Min = {Math.Round (MaxArray(array) - MinArray (array), 3)}");
+Console.WriteLine($"Max - Min = {Math.Round(MaxArray(array) - MinArray(array), 3)}");
