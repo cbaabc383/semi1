@@ -160,7 +160,7 @@ int[,] EverNumbers (int [,] array)
     return array;
 }
 
-int[,] created2Array = Create2Array (5,6,-5,-10);
+int[,] created2Array = Create2Array (5,6);
 Show2Array(created2Array);
 EverNumbers (created2Array);
 Show2Array(created2Array);
