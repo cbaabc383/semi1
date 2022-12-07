@@ -194,7 +194,7 @@ int min = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Input max possible value: ");
 int max = Convert.ToInt32(Console.ReadLine());
 
-int [,]firstArray = Create2dArray(rows, columns, min, max);
+int[,] firstArray = Create2dArray(rows, columns, min, max);
 Show2Array(firstArray);
 int[] minIndexArray = GetMinIndex(firstArray);
-GetZero (firstArray, minIndexArray);
+GetZero(firstArray, minIndexArray);
