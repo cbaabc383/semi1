@@ -139,10 +139,10 @@ void Show2Array(int[,] array)
     Console.WriteLine();
 }
 
-double []ColumnAverage(int[,] array)
+double[] ColumnAverage(int[,] array)
 {
-    int size =  array.GetLength(1);
-    double [] columnAverage = new double [size];
+    int size = array.GetLength(1);
+    double[] columnAverage = new double[size];
 
     for (int j = 0; j < array.GetLength(1); j++)
     {
@@ -151,9 +151,9 @@ double []ColumnAverage(int[,] array)
         {
             sumColumn += array[i, j];
         }
-        double average = Math.Round ((sumColumn / array.GetLength(0)), 2);
+        double average = Math.Round((sumColumn / array.GetLength(0)), 2);
         columnAverage[j] = average;
-        Console.Write (columnAverage[j] + "  ");
+        Console.Write(columnAverage[j] + "  ");
     }
     return columnAverage;
 }
