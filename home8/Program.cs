@@ -11,7 +11,7 @@
 8 4 4 2
 */
 
-
+/*
 int[,] Create2Array(int row, int column, int minVal, int maxVal)
 {
     int[,] createArray = new int[row, column];
@@ -64,7 +64,7 @@ Show2Array(newArray);
 
 int[,] backward = RowBackward (newArray);
 Show2Array(backward);
-
+*/
 
 
 
@@ -133,4 +133,7 @@ int[,] newArray = Create2Array(5, 6, 0, 10);
 Show2Array(newArray);
 Console.WriteLine($"Minimal row is: {MinRow(newArray)}");
 */
+
+
+
 
