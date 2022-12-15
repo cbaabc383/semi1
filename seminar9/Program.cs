@@ -37,11 +37,32 @@ Console.WriteLine(result);
 // Задайте значения M и N. Напишите программу, которая выводит все
 // натуральные числа в промежутке от M до N.
 // N < M, N = M, M < N.
-
+/*
 void ShowNumbersMN(int n, int m)
 {
-    
     if (Math.Max(n,m) != Math.Min(n, m)) ShowNumbersMN(Math.Max(n,m)-1, Math.Min(n, m));
     Console.Write(Math.Max(n,m) + " ");
 }
-ShowNumbersMN(5,8);
+ShowNumbersMN(10,2);
+*/
+
+
+
+// Напишите программу, которая на вход принимает два числа А и В,
+// и возводит число А в степень В.
+
+// 2^(-1) = 1/2
+// 2^(-3) = 1/(2^3)   2^3 = 8
+// -2^(-3) = -1/(2^3)   -2^3 = -8   -2^4 = 16
+// 2^0 = 1  -254565^0 = 1
+/*
+double APowB (int a, int b)
+{
+    if (b > 0) return APowB (a, b - 1) * a;
+    if (b < 0) return APowB (a, b + 1) / a;
+    return 1.0;    
+}
+double res = APowB(-2,-5);
+Console.Write(res);
+*/
+
