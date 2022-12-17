@@ -1,5 +1,5 @@
 ﻿//напишите программу, которая принимает на входе число (А) и выдает сумму чисел от 1 до А.
-/*
+
 void MetFindSum (int a)
 {
     int summa = 0;
@@ -38,7 +38,7 @@ Console.WriteLine ($"Summ of elements from 1 to {userNum} is {result}");
 //456 -> 3
 //78 -> 2
 //89126 -> 5
-
+/*
 int CountOfDigits (int number)
 {   
     int current = 1;
@@ -67,7 +67,7 @@ Console.WriteLine ($"Entered number {usernum} -> {count_digit}");
 //Напишите программу, которая принимает на вход число N и выдаёт произведение чисел от 1 до N.
 //4 -> 24 
 //5 -> 120
-
+/*
 void factorial (int n)
 {
     int multi = 1; //4 -> 24 multi > n ->
@@ -91,7 +91,7 @@ if (number <= 0)
 }
 
 factorial (number);
-
+*/
 
 //напишите программу, которая выводит массив из 8 элементов,
 // заполненный нулями и единицами в случайном порядке.

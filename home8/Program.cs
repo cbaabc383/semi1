@@ -59,7 +59,7 @@ int [,] RowBackward (int[,] array)
 }
 
 
-int[,] newArray = Create2Array(3, 5, 0, 10);
+int[,] newArray = Create2Array(3, 5, -10, 10);
 Show2Array(newArray);
 
 int[,] backward = RowBackward (newArray);
@@ -136,4 +136,88 @@ Console.WriteLine($"Minimal row is: {MinRow(newArray)}");
 
 
 
+// Задача 62. Напишите программу, которая заполнит спирально массив 4 на 4.
+// Например, на выходе получается вот такой массив:
+/*
+01 02 03 04
+12 13 14 05
+11 16 15 06
+10 09 08 07
+*/
 
+
+int[,] Spiral(int row, int column)
+{
+    int[,] array = new int[4, 4];
+    int start = 1;
+
+    int i = 0;
+    for (int j = 0; j <= 3; j++)
+    {
+        array[i, j] = start;
+        start++;
+    }
+
+    int k = 3;
+    for (int l = 1; l <= 3; l++)
+    {
+        array[l, k] = start;
+        start++;
+    }
+
+    int m = 3;
+    for (int n = 2; n >= 0; n--)
+    {
+        array[m, n] = start;
+        start++;
+    }
+
+    int p = 0;
+    for (int o = 2; o >= 1; o--)
+    {
+        array[o, p] = start;
+        start++;
+    }
+
+    int q = 1;
+    for (int r = 1; r <= 2; r++)
+    {
+        array[q, r] = start;
+        start++;
+    }
+
+    int t = 2;
+    for (int s = 2; s <= 2; s++)
+    {
+        array[s, t] = start;
+        start++;
+    }
+    
+    int u = 2;
+    for (int v = 1; v >= 1; v--)
+    {
+        array[u, v] = start;
+        start++;
+    }
+
+    return array;
+}
+
+void Show2Array(int[,] array)
+{
+    for (int i = 0; i < array.GetLength(0); i++)
+    {
+        for (int j = 0; j < array.GetLength(1); j++)
+        {
+            if (array[i, j] < 10)
+                Console.Write("0");
+            Console.Write(array[i, j] + " ");
+        }
+        Console.WriteLine();
+    }
+    Console.WriteLine();
+}
+
+
+int[,] newArray = Spiral(4, 4);
+Show2Array(newArray);
