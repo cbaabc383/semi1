@@ -45,11 +45,11 @@ m = 3, n = 2 -> A(m,n) = 29
 /*
 int A(int m, int n)
 {
-    if (n == 0) return m + 1;
-    if (n > 0 && m == 0) return A(n - 1, 1);
-    else return A(n - 1, A(n, m - 1));
+    if (m == 0) return n + 1;
+    if (m != 1 && n ==0) return A(m - 1, 1);
+    else return A(m - 1, A(m, n - 1));
 }
-int res = A(3,2);
+int res = A(1,1);
 Console.WriteLine(res);
 */
 
@@ -57,24 +57,15 @@ Console.WriteLine(res);
 
 //Задача: Написать рекурсивную функцию перевода из десятичной системы исчисления в двоичную
 
-
-static string Convert10to2(uint num, string res)
+string Convert10to2(int num)
 {
-  if (num < 2)
-  {
-    uint t = num % 2;
-    res = res + t.ToString();
-
-    // реверсирование строки res и возвращение результата
-    string res2 = "";
-    for (int i = res.Length-1; i>=0; i--)
-      res2 = res2 + res[i];
-    return res2;
-  }
-  else
-  {
-    uint t = num % 2;
-    res = res + t.ToString();
-    return Convert10to2(num / 2, res);
-  }
+  string res = String.Empty;
+  int modulo = num % 2;
+  if (num > 0) res = Convert10to2(num/2) +  modulo.ToString();
+  return res;
 }
+
+Console.Write("Input a decimal number: ");
+int dec = Convert.ToInt32(Console.ReadLine());
+
+Console.WriteLine($"{Convert10to2(dec)} in binary");
