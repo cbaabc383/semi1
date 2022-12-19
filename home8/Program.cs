@@ -346,6 +346,7 @@ Show2Array(newArray);
 26(1,0,1) 55(1,1,1)
 */
 
+/*
 int[,,] Create3dArray(int row, int column, int layer, int minVal, int maxVal)
 {
     int[,,] createArray = new int[row, column, layer];
@@ -380,3 +381,47 @@ void Show3dArray(int[,,] array)
 
 int[,,] newArray = Create3dArray(2, 2, 2, 10, 100);
 Show3dArray(newArray);
+*/
+
+
+/*
+Татьяна Гетманцева・Преподаватель
+Здравствуйте
+Вы проделали хорошую работу
+Решение обязательно найдется) в заполнении массива по спирали идет 4 движения: 
+слева направо, сверху вниз, справа на лево и снизу вверх. Первое идет по всей строке, 
+второе - на 1 меньше кол-ва строк, третье - на 1 меньше длины строки, последнее - меньше размера на 2. 
+Всё из-за того, что углы заполняются на предыдущем шаге
+*/
+
+int[,] Spiral(int row, int column)
+{
+    int[,] array = new int[row, column];
+    for (int i = 0; i < row; i++)
+    {
+        for (int j = 0; j < column; j++)
+        {
+            array[i, j] = i + j;
+        }
+    }
+    return array;
+}
+
+
+void Show2Array(int[,] array)
+{
+    for (int i = 0; i < array.GetLength(0); i++)
+    {
+        for (int j = 0; j < array.GetLength(1); j++)
+        {
+            if (array[i, j] < 10)
+                Console.Write("0");
+            Console.Write(array[i, j] + " ");
+        }
+        Console.WriteLine();
+    }
+    Console.WriteLine();
+}
+
+int[,] newArray = Spiral(4, 4);
+Show2Array(newArray);
