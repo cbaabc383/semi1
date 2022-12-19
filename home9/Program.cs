@@ -57,9 +57,10 @@ Console.WriteLine(res);
 
 //Задача: Написать рекурсивную функцию перевода из десятичной системы исчисления в двоичную
 
+
+string res = String.Empty;
 string Convert10to2(int num)
-{
-  string res = String.Empty;
+{  
   int modulo = num % 2;
   if (num > 0) res = Convert10to2(num/2) +  modulo.ToString();
   return res;
